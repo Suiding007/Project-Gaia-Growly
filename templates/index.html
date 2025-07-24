@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/nav.css">
+    <link rel="stylesheet" href="static/index.css">
+    <title>Growly</title>
+</head>
+<nav>
+    <ul>
+        <li><a>growly</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+<body>
+    <h1>Growly</h1>
+    <div id="leftpanel">
+        <h4>Crop Selection</h4>
+        <input type="checkbox" id="Tomato" name="Tomato" value="Tomato">
+        <label for="Tomato"> Tomato</label><br>
+        <input type="checkbox" id="Pepper" name="Pepper" value="Pepper">
+        <label for="Pepper"> Pepper</label><br> 
+        <input type="checkbox" id="Cucumber" name="Cucumber" value="Cucumber">
+        <label for="Cucumber"> Cucumber</label><br>
+        <input type="checkbox" id="Lettuce" name="Lettuce" value="Lettuce">
+        <label for="Lettuce"> Lettuce</label><br>
+    </div>
+    <div id="rightpanel">
+        {% block content %}
+        <h4>Crop Information</h4>
+        <table>
+            <tr>
+                <th>crop</th>
+                <th>Jan</th>
+                <th>Feb</th>
+                <th>Mar</th>
+                <th>Apr</th>
+                <th>May</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Aug</th>
+                <th>Sep</th>
+                <th>Oct</th>
+                <th>Nov</th>
+                <th>Dec</th>
+            </tr>
+            <tr>
+                {% for crop in crops %}
+                <tr>
+                    <td>{{ crop.name }}</td>
+                    <td>{{ crop.jan }}</td>
+                    <td>{{ crop.feb }}</td>
+                    <td>{{ crop.mar }}</td>
+                    <td>{{ crop.apr }}</td>
+                    <td>{{ crop.may }}</td>
+                    <td>{{ crop.jun }}</td>
+                    <td>{{ crop.jul }}</td>
+                    <td>{{ crop.aug }}</td>
+                    <td>{{ crop.sep }}</td>
+                    <td>{{ crop.oct }}</td>
+                    <td>{{ crop.nov }}</td>
+                    <td>{{ crop.dec }}</td>
+                </tr>
+                {% endfor %}
+            </tr>
+
+        </table>
+        {% endblock %}
+    </div>
+</body>
+</html>

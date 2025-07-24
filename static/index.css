@@ -1,0 +1,20 @@
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+#leftpanel {
+    width: 20%;
+    float: left;
+}
+
+#rightpanel {
+    width: 75%;
+    float: right;
+}
