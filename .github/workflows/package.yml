@@ -1,0 +1,12 @@
+name: Creating docker imgage
+on: 
+  push:
+    branches: [Dev]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      # Add additional steps here as needed
