@@ -1,0 +1,5 @@
+name: Creating docker imgage
+on: 
+  push:
+    branches: [Dev]
+    
