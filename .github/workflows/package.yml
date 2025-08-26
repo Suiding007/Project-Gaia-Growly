@@ -11,6 +11,6 @@ jobs:
         uses: actions/checkout@v5
       - name: build-and-push-image
         run: |
-          echo ${{ secrets.GH_PAT }} | docker login --username suiding007 --password-stdin
+          docker login --username suiding007 --password-stdin ${{ secrets.GH_PAT }}
           docker build . -t ghcr.io/suiding007/growly:latest
           docker push ghcr.io/suiding007/growly:latest
