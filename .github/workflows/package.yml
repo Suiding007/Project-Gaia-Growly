@@ -1,7 +1,7 @@
 name: Creating docker imgage
 on: 
   push:
-    branches: [Dev]
+    branches: [main]
 
 jobs:
   build:
