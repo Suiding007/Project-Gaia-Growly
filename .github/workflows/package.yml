@@ -14,3 +14,4 @@ jobs:
           echo "${{ secrets.GH_PAT }}" | docker login ghcr.io --username ${{ secrets.USERNAME }} --password-stdin
           docker build . -t ghcr.io/suiding007/growly:latest
           docker push ghcr.io/suiding007/growly:latest
+
