@@ -1,5 +1,17 @@
 name: Creating docker imgage
 on: 
   push:
-    branches: [Dev]
-    
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: build-and-push-image
+        run: |
+          echo "${{ secrets.GH_PAT }}" | docker login ghcr.io --username ${{ secrets.USERNAME }} --password-stdin
+          docker build . -t ghcr.io/suiding007/growly:latest
+          docker push ghcr.io/suiding007/growly:latest
+

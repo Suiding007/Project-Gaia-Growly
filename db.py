@@ -18,7 +18,7 @@ cur.execute("INSERT INTO crops (name, plant_start, plant_end, harvest_start, har
 cur.execute("INSERT INTO crops (name, plant_start, plant_end, harvest_start, harvest_end) VALUES (?, ?, ?, ?, ?)",
             ("Pepper", "2023-03-01", "2023-03-15", "2023-07-01", "2023-07-15"))
 cur.execute("INSERT INTO crops (name, plant_start, plant_end, harvest_start, harvest_end) VALUES (?, ?, ?, ?, ?)",
-            ("Cumcumber", "2023-02-01", "2023-02-15", "2023-06-01", "2023-06-15"))
+            ("Cucumber", "2023-02-01", "2023-02-15", "2023-06-01", "2023-06-15"))
 cur.execute("INSERT INTO crops (name, plant_start, plant_end, harvest_start, harvest_end) VALUES (?, ?, ?, ?, ?)",
             ("Letttuce", "2023-02-01", "2023-02-15", "2023-06-01", "2023-06-15"))
 conn.commit()
